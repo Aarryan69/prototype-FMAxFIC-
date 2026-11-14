@@ -82,7 +82,8 @@ Production would require server-side tenant isolation and RBAC; employer SSO or 
 ## Files
 
 - `dist/index.html` – application entry.
-- `dist/styles.css` – navy / teal visual system and responsive layouts.
+- `dist/styles.css` – existing layout and responsive structure.
+- `dist/brand.css` – ProWear × NovaThreads visual identity: tailored navy, lavender, acid yellow, woven graphics and apparel-label styling.
 - `dist/app.js` – six application views, local state and guided demo.
 - `dist/engine.js` – seed data, diagnostics, economics, access and order rules.
 - `tests/engine.test.js` – business-flow and financial checks.
@@ -96,3 +97,7 @@ To use GitHub Pages, select **Settings → Pages → Deploy from a branch → ma
 Aarryan Kumar Khatri · Aditya Kumar · Kunal · Vibhu Vedant Goel
 
 **Case!Please — FMA Gargi College × FIC DDUC**
+
+## Visual identity
+
+RE-THREAD is styled as a shared operations extension. ProWear Solutions contributes structured midnight-blue surfaces and precise controls; NovaThreads contributes lavender, acid-yellow accents, expressive typography and apparel-label details. The employee storefront gives NovaThreads more visual emphasis while preserving the same layout, data and workflows. The wordmarks are prototype design treatments, not supplied official brand assets.

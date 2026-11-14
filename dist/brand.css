@@ -1,0 +1,212 @@
+/* RE-THREAD: an operations extension for ProWear Solutions × NovaThreads.
+   Corporate tailoring + expressive fashion. Layout and workflows stay in styles.css. */
+:root {
+  --navy: #19243e;
+  --teal: #384caf;
+  --mint: #dce883;
+  --ink: #20283c;
+  --muted: #687080;
+  --bg: #f3f1e9;
+  --line: #deded8;
+  --white: #fffefa;
+  --amber: #865516;
+  --red: #af3c48;
+  --nova: #c9b7ee;
+  --nova-deep: #6250bd;
+  --acid: #e5f29b;
+  --blue: #384caf;
+  --positive: #35654f;
+}
+body {
+  background-color: var(--bg);
+  background-image: linear-gradient(#27355003 1px, transparent 1px), linear-gradient(90deg,#27355003 1px,transparent 1px);
+  background-size: 24px 24px;
+  -webkit-font-smoothing: antialiased;
+}
+::selection {background:var(--nova);color:var(--navy)}
+:focus-visible {outline: 3px solid #8870ce;outline-offset:4px}
+button, .panel, .product {transition:background-color .18s,border-color .18s,box-shadow .18s,transform .18s}
+h1 {font-weight:700;letter-spacing:-1.25px;line-height:1.2}
+h2,h3 {font-weight:700}
+.subtitle {color:#626a79;line-height:1.7}
+.eyebrow {color:#5f5790;letter-spacing:1.45px;font-size:9px;font-weight:700}
+/* Tailored application shell */
+aside {background:#19243e;color:#b4b9c8;border-right:1px solid #343e58;box-shadow:8px 0 28px #1a243308}
+aside::before {content:'';position:absolute;inset:0 0 auto;height:4px;background:linear-gradient(90deg,#8799db 0 50%,var(--nova) 50% 82%,var(--acid) 82%)}
+.brand {gap:10px;padding:0 9px}
+.brand strong {font-size:19px;font-weight:700;letter-spacing:-.65px;white-space:nowrap;position:relative}
+.brand-period {font:9px 'DM Sans',sans-serif;position:absolute;top:0;right:-10px;color:#c9b7ee}
+.brand small {font-size:7px;letter-spacing:1.8px;color:#a6afc5;margin-top:6px}
+.mark {position:relative;overflow:hidden;border:0;border-radius:3px;width:34px;min-width:34px;height:34px;background:#2c3753;transform:rotate(-4deg)}
+.mark i {position:absolute;display:block;width:11px;height:35px;top:0;left:6px;transform:skew(-18deg);background:#dce883}
+.mark i:last-child {height:11px;width:35px;top:12px;left:0;transform:rotate(-23deg);background:#c9b7ee;box-shadow:0 2px 0 #19243e44}
+.workspace {display:block;border:1px solid #4a536a;border-radius:3px;margin-top:28px;margin-bottom:24px;padding:15px 11px 12px;background:#222f4b;position:relative}
+.workspace::after {content:'';position:absolute;left:6px;right:6px;top:6px;bottom:6px;border:1px dashed #9199b125;pointer-events:none}
+.brand-pair {display:flex;align-items:center;justify-content:space-between;gap:5px;position:relative;z-index:1}
+.prowear-wordmark {font-size:12px;font-weight:750;letter-spacing:1.25px;color:#f5f4ee;line-height:1.3}
+.prowear-wordmark span {display:block;font-size:6px;letter-spacing:3.35px;color:#bfc5d5;margin-top:3px}
+.brand-cross {color:#9298ad;font-size:17px;font-weight:400}
+.nova-wordmark {font:700 italic 19px/.72 'Space Grotesk',Arial,sans-serif;letter-spacing:-1px;color:var(--nova);position:relative;padding-right:14px}
+.nova-wordmark span {display:block;font-size:12px;letter-spacing:-.7px;margin-top:4px}
+.nova-wordmark i {font-size:21px;font-style:normal;position:absolute;right:-1px;top:-2px;color:var(--acid)}
+.workspace-caption {font-size:8px;color:#bec6d5;margin-top:17px;display:flex;align-items:center;gap:6px;white-space:nowrap}
+.dot {background:#dce883}
+.navlabel {font-size:8px;letter-spacing:1.2px;color:#9099b0;display:flex;justify-content:space-between;padding-left:13px;padding-right:13px}
+.navlabel span {font-size:7px;letter-spacing:.4px;color:#8790a8}
+.navbtn {border-radius:4px;color:#b9c0d1;font-size:12px;border:1px solid transparent}
+.navbtn.active {background:#e5f29b;color:#263444;border-color:#dce78c;box-shadow:2px 3px 0 #0c14272b;font-weight:700}
+.navbtn:hover {background:#2c3959;color:#fff}
+.navbtn.active:hover {background:#edf5b9;color:#263444}
+.navbtn.active svg {stroke-width:1.9}
+.navbtn .count {background:#3c4564;color:#e0d6f8;border-radius:3px}
+.navbtn.active .count {background:#cad97a;color:#334331}
+.side-note {border-top:1px dashed #64708b;color:#aeb6c9;font-size:10px;line-height:1.85}
+.side-note .text-link {color:#d3c2f2;font-size:10px}
+.avatar {border-radius:4px;background:#c9b7ee;color:#26304a;transform:rotate(-5deg);font-family:'Space Grotesk',sans-serif}
+.team b {color:#ececf0;font-size:11px}.team small{color:#a9b1c7;font-size:9px}
+.topbar {background:#faf9f4;border-bottom:1px solid #d7d8d3;box-shadow:0 3px 0 #fff6}
+.crumb {display:flex;align-items:center;gap:17px;min-width:0}
+.crumb b {font-family:'Space Grotesk',sans-serif;font-size:11px;letter-spacing:.7px;color:#344261;white-space:nowrap}
+.crumb b em {font-size:13px;letter-spacing:-.7px;color:#655187}
+.crumb .crumb-cross {color:#8b87a1;margin:0 6px;font-size:12px;font-weight:400}
+.crumb .crumb-page {margin-left:0;font-size:11px;color:#727887;white-space:nowrap}
+.top-actions {gap:11px}
+/* Apparel-label geometry, restrained ink and expressive accents */
+.btn {background:var(--blue);border-color:var(--blue);border-radius:4px;font-size:11px;font-weight:700;box-shadow:0 2px 0 #19243e14}
+.btn:hover:not(:disabled) {transform:translateY(-1px);filter:none;box-shadow:0 4px 10px #19243e18;background:#2f409c}
+.btn:active:not(:disabled) {transform:translateY(0)}
+.btn.secondary {background:#fffefa;border-color:#cfd0d4;color:#34405b;box-shadow:0 2px 0 #19243e05}
+.btn.secondary:hover:not(:disabled) {background:#f0edf7;border-color:#b6a7d1}
+.btn.dark {background:#202b46;border-color:#202b46;color:#e5f29b}
+.btn.dark:hover:not(:disabled) {background:#303e60}
+.pill {background:#e9eddf;color:#4b6048;border:1px solid #dce3d3;border-radius:3px;font-size:9px;letter-spacing:.2px;font-weight:700}
+.pill.amber {background:#f8ecd6;color:#865516;border-color:#ead8b9}
+.pill.red {background:#fae4e8;color:#a33d4a;border-color:#efd0d8}
+.pill.gray {background:#eeedf3;color:#65657b;border-color:#dedde7}
+.topbar .pill.gray {background:#f0f3e3;border-color:#dde4c8;color:#4a5c3f}
+.topbar .dot {background:#65844f}
+.text-link {color:#5c49a3}
+.panel,.metric,.product {border-color:#d8d9d4;border-radius:7px;background:#fffefa;box-shadow:0 3px 0 #29375404,0 5px 16px #29375403}
+.panel-head {border-bottom:1px solid #e6e5e0;background:#fdfcf8;padding-top:18px;padding-bottom:18px;position:relative}
+.panel-head::before {content:'';position:absolute;left:0;top:22px;height:17px;width:3px;background:#8a78b6}
+.panel-head h2 {font-size:15px;letter-spacing:-.35px}
+.panel-head p {color:#6e7482;font-size:10px}
+.metric {position:relative;overflow:hidden;border-top:3px solid #384caf;background:#fffefa}
+.metric::after {content:'';position:absolute;right:-10px;bottom:-28px;width:65px;height:80px;border:1px solid #384caf0c;transform:rotate(30deg);pointer-events:none}
+.metric:nth-child(2) {border-top-color:#a790ce;background:#f5f1fb}
+.metric:nth-child(3) {border-top-color:#7583ac;background:#f0f3f8}
+.metric:nth-child(4) {border-top-color:#9eaf46;background:#edf2d8}
+.metric-top {color:#515b70;font-size:11px}
+.metric-top svg {color:#5f6681}
+.metric strong {font-weight:600;letter-spacing:-1.4px;font-variant-numeric:tabular-nums}
+.metric small {font-size:10px;color:#626b76;line-height:1.5}
+/* Woven two-brand signature. Pure CSS, no external decorative assets. */
+.hero {background:#202b46;border-radius:7px;border:1px solid #303d5d;padding:28px 29px;color:#faf8f0;isolation:isolate;box-shadow:0 3px 0 #19243e0d}
+.hero::before {content:'';position:absolute;inset:8px;border:1px dashed #cbd1e51f;border-radius:2px;pointer-events:none;z-index:-1}
+.hero::after {width:310px;height:310px;right:-165px;top:-100px;border:45px solid #a88ed52e;transform:rotate(-28deg);border-radius:36%;z-index:-1}
+.hero h2 {font-size:25px;font-weight:500;line-height:1.35;letter-spacing:-1px}
+.hero h2 em {font-style:normal;color:#d4c1f4}
+.hero p {color:#bac2d3;font-size:11px;max-width:550px}
+.hero .eyebrow {color:#c8cfde;letter-spacing:1.6px;font-size:8px;display:flex;align-items:center;gap:10px;margin-bottom:13px}
+.hero-edition {color:#e5f29b;border:1px solid #87926470;padding:5px 7px;letter-spacing:1px;border-radius:2px;white-space:nowrap}
+.hero-copy {position:relative;z-index:2;max-width:66%}
+.thread-art {position:absolute;inset:0 0 0 auto;width:40%;overflow:hidden;z-index:-1;pointer-events:none;opacity:.55}
+.thread {display:block;position:absolute;left:35%;height:330px;width:100px;top:-80px;transform:rotate(28deg);background:repeating-linear-gradient(90deg,#4c5e8a 0 1px,#344467 1px 4px);border-left:1px solid #8994b866;border-right:1px solid #8994b866;box-shadow:7px 0 0 #17213a55}
+.thread-nova {width:105px;height:390px;left:45%;top:-78px;transform:rotate(-43deg);background:repeating-linear-gradient(90deg,#c7b8e3 0 1px,#a990c8 1px 4px);border-color:#d7c9ec77;box-shadow:5px 0 0 #17213a40}
+.thread-star {position:absolute;right:15px;top:-40px;font:160px/.95 'Space Grotesk',sans-serif;color:#e5f29b24;transform:rotate(15deg)}
+.target-tag {position:relative;background:#e5f29b;color:#293343;border:1px solid #edf5bc;border-radius:3px;padding:18px 17px 22px;min-width:255px;transform:rotate(-3deg);box-shadow:4px 6px 0 #0f183b35;flex-shrink:0}
+.target-tag::before {content:'';width:5px;height:5px;position:absolute;left:9px;top:9px;border-radius:50%;background:#657544}
+.tag-label {display:block;color:#4a583a;font-size:8px;letter-spacing:1.25px;font-weight:700;padding-left:8px;margin-bottom:13px}
+.target-tag strong {font-family:'Space Grotesk',sans-serif;font-size:33px;letter-spacing:-1.5px;font-weight:600;white-space:nowrap}
+.target-tag small {color:#526044;font-size:8px;letter-spacing:0;margin-top:9px}
+.tag-stitch {position:absolute;left:7px;right:7px;bottom:7px;border-bottom:1px dashed #6d7b4e66}
+.hero-badge:not(.target-tag) {border-color:#7885a644}
+.hero-badge:not(.target-tag) small {color:#d3c8eb}
+.hero-numbers {font-family:'Space Grotesk',sans-serif;font-weight:500;letter-spacing:-1px}
+.hero-numbers span {color:var(--acid)}
+.hero-numbers .mini-label {color:#c0c7d9;font-size:9px;letter-spacing:1px}
+/* Operational surfaces */
+.insight {background:#efedf7;border-left-color:#9a86c3;border-radius:0 4px 4px 0;color:#63597d;font-size:10px}
+.chart text {fill:#747c8b}
+.legend {color:#697180}
+.signal:hover {background:#f5f1fc}
+.signal {border-bottom-color:#e8e5e0}
+.signal-icon {background:#eee7f8;color:#7c63a7;border:1px solid #e0d5ef;border-radius:4px}
+.signal h3 {font-size:12px;letter-spacing:-.2px}
+.signal p {color:#6b7281}
+.loop {background:linear-gradient(90deg,#f6f8fb,#f9f4fb)}
+.step-no {border-radius:3px;background:#e5eaf7;color:#4f6094;border:1px solid #d3dbef;box-shadow:2px 2px 0 #6679a413;font-family:'Space Grotesk',sans-serif}
+.loop-step:nth-child(2n) .step-no {background:#ebe1f7;color:#705a97;border-color:#dfd0ee;transform:rotate(-4deg)}
+.loop-step:last-child .step-no {background:#e5edbd;color:#566a35;border-color:#d3dfa1}
+.loop-step:not(:last-child)::after {color:#9a91b2}
+.loop-step p {color:#6a7382}
+.loop-step h3 {font-size:12px}
+input,select,textarea {border-radius:4px;border-color:#d5d6d9;background:#fcfbf8;box-shadow:inset 0 1px 2px #19243e03;font-size:12px}
+input:focus,select:focus,textarea:focus {outline:2px solid #a391c8;outline-offset:1px;background:#fffefa;border-color:#9b85c6}
+label {color:#545c70;font-size:11px}
+input[type=checkbox],input[type=range] {accent-color:#6852ac}
+th {background:#efeff1;color:#677084;font-weight:600;border-bottom:1px solid #dadde3;letter-spacing:1px}
+td {border-top-color:#e8e7e2}
+tbody tr:hover {background:#f6f3fb}
+td b {font-weight:600}
+.meter {background:#e8e6ed;border-radius:1px}.meter i{background:#8670b6;border-radius:1px}.meter i.warm{background:#bf8d48}
+.reasonbar:nth-child(even) .meter i {background:#596eac}
+.statusbox {background:#edf2df;border-color:#d8e0be;border-radius:4px;border-left:3px solid #92a55d}
+.statusbox.hold {background:#fbefd9;border-color:#e9d7b2;border-left-color:#c29243}
+.statusbox h3 {color:#374b38}
+.statusbox.hold h3 {color:#80581b}
+.statusbox .eyebrow {color:#536b41}
+.sourceblock {border:1px dashed #d0cbdc;background:#f7f4fa;border-radius:3px;color:#6a647b}
+.phase {border-bottom-style:dashed}
+.number {background:#e9e3f3;color:#715d99;border-radius:3px;font-family:'Space Grotesk',sans-serif}
+.green {color:#35654f}
+.secure-band {background:#e9eedc;border:1px solid #d4dfbd;border-left:3px solid #819b54;color:#4d6141;border-radius:4px}
+.action-card {background:#fffdf8;border-style:dashed;border-color:#c9bbdf;border-radius:4px}
+.biglock {color:#ded0f3;background:#273451;border:1px solid #4b5570;border-radius:6px;box-shadow:5px 5px 0 #e5f29b;transform:rotate(-3deg)}
+.footer {border-top:1px dashed #d1d2cd;margin-top:5px;padding-top:18px;color:#717988}
+.footer span:last-child {font-size:8px;letter-spacing:.5px}
+/* NovaThreads takes the visual lead inside the employee catalogue. */
+body[data-view=storefront] .page-head h1 {letter-spacing:-1.7px}
+body[data-view=storefront] .hero {background:#c9b7ee;color:#292341;border-color:#b6a2db}
+body[data-view=storefront] .hero::before {border-color:#6c558d40}
+body[data-view=storefront] .hero::after {border:30px solid #e5f29b;right:-85px;top:-100px;transform:rotate(-30deg);border-radius:2px}
+body[data-view=storefront] .hero h2 {font-size:35px;font-weight:600;letter-spacing:-1.7px}
+body[data-view=storefront] .hero h2 em {font-style:italic;color:#39472e;box-shadow:inset 0 -.4em 0 #e5f29b}
+body[data-view=storefront] .hero p {color:#594b73;max-width:610px}
+body[data-view=storefront] .hero .eyebrow {color:#534369;font-size:9px}
+body[data-view=storefront] .hero-badge {color:#4f4266;border-left:1px solid #a08abf}
+body[data-view=storefront] .hero-badge small {color:#534369}
+.product {border-radius:4px;border-color:#d5cddd;box-shadow:0 3px 0 #bdb3cf22}
+.product:hover {transform:translateY(-3px);box-shadow:0 8px 25px #3b305c13;border-color:#b3a2cc}
+.product-art {background:#e8e4d9;background-image:linear-gradient(#746d8012 1px,transparent 1px),linear-gradient(90deg,#746d8012 1px,transparent 1px);background-size:23px 23px;overflow:hidden;border-bottom:1px solid #d6cfdf}
+.product:nth-child(2) .product-art {background-color:#ded8ed}
+.product:nth-child(3) .product-art {background-color:#e8edcf}
+.product-art::before {content:attr(data-category);position:absolute;bottom:13px;left:12px;font:700 37px/1 'Space Grotesk',Arial,sans-serif;letter-spacing:-2px;color:#4d456319;z-index:0}
+.product-art::after {content:'N / T';position:absolute;right:10px;top:15px;writing-mode:vertical-rl;font:600 9px 'Space Grotesk',sans-serif;letter-spacing:2px;color:#64577d}
+.product-art svg {filter:drop-shadow(8px 12px 4px #3c3a4622);transform:rotate(-7deg);position:relative;z-index:1;transition:transform .25s;width:155px;height:166px}
+.product:nth-child(2) .product-art svg {transform:rotate(6deg)}
+.product:hover .product-art svg {transform:rotate(0) translateY(-3px)}
+.product-art .pill {background:#faf7ed;border-color:#b6abca;color:#655774;z-index:2;transform:rotate(-3deg);padding:5px 7px;font-size:7px;letter-spacing:.8px;box-shadow:2px 2px 0 #9585ac20}
+.product-info {background:#fffcf8}
+.product-info .eyebrow {font-size:8px;letter-spacing:1.25px;color:#796591}
+.product-info h3 {font-size:16px;font-weight:700;letter-spacing:-.7px}
+.product-info .split-title>b {font-family:'Space Grotesk',sans-serif;font-size:16px}
+.product-info .btn {background:#27243c;border-color:#27243c;color:#e5f29b}
+.product-info .btn:hover {background:#443658}
+/* Dialogs inherit the same label system. */
+dialog {border-radius:7px;background:#fffdf7;border:1px solid #a99aba;box-shadow:8px 10px 0 #19243e25,0 24px 100px #19243e40}
+dialog::backdrop {background:#151e37aa;backdrop-filter:blur(4px)}
+.modal-top {background:#202b46;color:#ece8f4;border-bottom:3px solid #c9b7ee}
+.modal-top h3 {font-size:12px;letter-spacing:.8px}
+.modal-body h2 {font-size:26px;letter-spacing:-1px}
+.modal-bottom {background:#f3f0e9;border-top:1px dashed #cbc6d4}
+.demo-callout {background:#ede7f6;border:1px solid #ddd1ec;border-radius:3px;color:#5b4d70}
+.demo-callout b {color:#514378}
+.demosteps {gap:6px}.demosteps i{border-radius:1px;background:#e1dbea}.demosteps i.on{background:#8970b6}
+#toast {background:#222d48;border:1px solid #53637c;border-left:4px solid #e5f29b;color:#f5f3ed;border-radius:4px}
+@media(min-width:1600px) {.hero h2{font-size:29px}.target-tag{min-width:285px;padding:23px}.target-tag strong{font-size:39px}}
+@media(max-width:1200px) {.crumb{gap:10px}.crumb .crumb-page{display:none}.hero-copy{max-width:61%}.hero h2{font-size:22px}.target-tag{min-width:220px;padding:15px 13px 20px}.target-tag strong{font-size:29px}.target-tag small{font-size:7px}.hero .eyebrow{letter-spacing:1px;font-size:7px}.hero-edition{padding:4px 5px}}
+@media(min-width:851px) and (max-width:1150px) {.brand{padding:0 5px;gap:8px}.brand strong{font-size:16px}.brand small{font-size:6px;letter-spacing:1.4px}.workspace{padding-left:8px;padding-right:8px}.prowear-wordmark{font-size:10px;letter-spacing:.9px}.prowear-wordmark span{font-size:5px;letter-spacing:2.8px}.nova-wordmark{font-size:17px;padding-right:11px}.nova-wordmark span{font-size:11px}.nova-wordmark i{font-size:17px}.workspace-caption{font-size:7px;gap:5px}.navlabel{font-size:7px;letter-spacing:.7px}.navlabel span{font-size:6px}.navbtn{font-size:11px;gap:9px;padding-left:13px;padding-right:10px}.metric strong{font-size:25px}}
+@media(max-width:850px) {.crumb{display:none}.hero-copy{max-width:100%}.hero h2{font-size:24px}.hero .eyebrow{font-size:8px}.hero-edition{font-size:8px}.thread-art{width:40%;opacity:.22}.hero p{max-width:90%}.hero::after{opacity:.5}.target-tag{display:none}.panel-head{flex-wrap:wrap}.footer{gap:9px}.top-actions{margin-left:auto}.secure-band{flex-wrap:wrap}body[data-view=storefront] .hero h2{font-size:29px}}
+@media(max-width:480px) {h1{font-size:25px;letter-spacing:-1px}.eyebrow{font-size:8px;line-height:1.6;letter-spacing:1px}.hero h2{font-size:22px}.hero .eyebrow{font-size:7px;letter-spacing:.8px;gap:7px}.hero-copy{max-width:100%}.hero p{max-width:100%;font-size:11px}.thread-art{width:65%;opacity:.12}.hero{padding:23px 20px}.metric-top{font-size:10px}.metric strong{font-size:24px}.metric small{font-size:9px}.metric{padding:15px 13px}.form-actions{flex-wrap:wrap}.panel-head h2{font-size:14px}.content{padding-top:23px}.top-actions .btn{font-size:10px}.signal{padding:17px 16px}.signal h3{font-size:12px}.signal p{font-size:10px}.loop{gap:15px}.footer span:first-child{align-items:flex-start;line-height:1.7}.footer svg{flex-shrink:0;margin-top:2px}}
+@media(prefers-reduced-motion:reduce) {*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.product:hover,.btn:hover{transform:none}}
